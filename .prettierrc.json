@@ -1,0 +1,6 @@
+{
+    "disableLanguages": ["vue"],
+    "semi": false,
+    "singleQuote": false,
+    "printWidth": 120
+  }

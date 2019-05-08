@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:200,400");
+
+:root {
+  --black: #111111;
+  --blackTransparent01: #111111ad;
+  --blackTransparent02: #11111159;
+  --white: #fafafa;
+
+  --bodyFont: "Work Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  font-family: var(--bodyFont);
+  font-weight: 200;
+  color: var(--white);
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  background: var(--blackTransparent01);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  z-index: -9;
+}
+
+main {
+  min-height: 100vh;
+  background: var(--blackTransparent02);
+}
+
+main > section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 9rem;
+  margin-bottom: 2rem;
+  z-index: -99;
+}
+
+p {
+  font-size: 2rem;
+}
