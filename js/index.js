@@ -76,7 +76,7 @@ window.onload = () => {
     var loader = new THREE.GLTFLoader()
 
     // Optional: Provide a DRACOLoader instance to decode compressed mesh data
-    THREE.DRACOLoader.setDecoderPath("/models/irene.gltf")
+    THREE.DRACOLoader.setDecoderPath("./models/irene.gltf")
     loader.setDRACOLoader(new THREE.DRACOLoader())
 
     // Optional: Pre-fetch Draco WASM/JS module, to save time while parsing.
@@ -85,7 +85,7 @@ window.onload = () => {
     // Load a glTF resource
     loader.load(
       // resource URL
-      "/models/irene.gltf",
+      "./models/irene.gltf",
       // called when the resource is loaded
       function(gltf) {
         gltf.scene.name = "Irene"
