@@ -172,41 +172,45 @@ window.onload = () => {
       case window.scrollY > section4.offsetTop - section1.offsetHeight / 2:
         console.log("Scroll hasta la sección 4")
         if (!animating1) {
-          var animation = new TWEEN.Tween(scene.children[1].rotation).to({ x: -0.6, y: 2.6, z: 0.4 }, 500).start()
+          var animation = new TWEEN.Tween(scene.children[1].rotation).to({ x: -1, y: 2, z: 0.15 }, 500).start()
           animating1 = true
           animating2 = false
           animating3 = false
           animating4 = false
+          document.querySelector("body").style.backgroundColor = "blue"
         }
         break
       case window.scrollY > section3.offsetTop - section2.offsetHeight / 2:
         console.log("Scroll hasta la sección 3")
         if (!animating2) {
-          var animation = new TWEEN.Tween(scene.children[1].rotation).to({ x: -0.4, y: 3, z: 0.3 }, 500).start()
+          var animation = new TWEEN.Tween(scene.children[1].rotation).to({ x: -0.4, y: 2, z: 0.15 }, 500).start()
           animating2 = true
           animating1 = false
           animating3 = false
           animating4 = false
+          document.querySelector("body").style.backgroundColor = "red"
         }
         break
       case window.scrollY > section2.offsetTop - section3.offsetHeight / 2:
         console.log("Scroll hasta la sección 2")
         if (!animating3) {
-          var animation = new TWEEN.Tween(scene.children[1].rotation).to({ x: 0.1, y: 2.1, z: 0.2 }, 500).start()
+          var animation = new TWEEN.Tween(scene.children[1].rotation).to({ x: 0.1, y: 2, z: 0.15 }, 500).start()
           animating3 = true
           animating1 = false
           animating2 = false
           animating4 = false
+          document.querySelector("body").style.backgroundColor = "green"
         }
         break
       case window.scrollY > section1.offsetTop - section4.offsetHeight / 2:
         console.log("Scroll hasta la sección 1")
         if (!animating4) {
-          var animation = new TWEEN.Tween(scene.children[1].rotation).to({ x: -0.25, y: 2, z: 0.15 }, 500).start()
+          var animation = new TWEEN.Tween(scene.children[1].rotation).to({ x: -0.15, y: 2, z: 0.15 }, 500).start()
           animating4 = true
           animating1 = false
           animating2 = false
           animating3 = false
+          document.querySelector("body").style.backgroundColor = "teal"
         }
         break
     }
